@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2K Craves</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="banner"></div>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="logo-box">
+                <img src="2KCravesLogo.png" alt="2K Craves Logo">
+            </div>
+            
+            <button type="button" onclick="goToPage('home-page')">
+                Home
+            </button>
+
+            <button type="button" onclick="goToPage('favorites-page')">
+                Favorites
+            </button>
+
+            <button type="button" onclick="goToPage('about-page')">
+                About Us
+            </button>
+            
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+
+            <!-- HOME PAGE -->
+            <div id="home-page" class="page">
+                <div class="header-bar">
+                    <h2>HOME</h2>
+
+                    <form class="search-area" id="searchForm">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search a meal..."
+                            aria-label="Search a meal"
+                        >
+
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+                <div id="results" aria-live="polite">
+                    <h2 class="section-title">SIKAT RECIPES!</h2>
+                    <p>Loading recipes...</p>
+                </div>
+            </div>
+
+            <!-- FAVORITES PAGE -->
+            <div id="favorites-page" class="page" hidden>
+                <div class="header-bar">
+                    <h2>FAVORITES</h2>
+                </div>
+
+                <div id="favorites-list"></div>
+            </div>
+
+           
+<!-- ABOUT US PAGE -->
+<div id="about-page" class="page" hidden>
+    <h2>ABOUT US</h2>
+
+    <p class="about-message">
+        We created this wesbite to help people<br>
+        enjoy homecooked food, especially students<br>
+        who are away from home.<br>
+        <br>
+        We provided simple recipes, ingredients,<br>
+        cooking instructions, and help people utilize<br>
+        resources by budgeting whilst enjoying food.<br>
+        <br>
+        The Filipino recipes in the main database<br>
+        are student-friendly sample recipes for this<br>
+        website project. With sources provided<br>
+        <br>
+    </p>
+</div>
+
+
+        </div>
+    </div>
+
+<!-- RECIPE DETAILS POPUP -->
+<div id="recipeModal" class="recipe-modal" hidden>
+    <div class="recipe-modal-content">
+        <button type="button" id="closeRecipeModal"
+                class="close-recipe-modal" aria-label="Close recipe">
+            &times;
+        </button>
+
+        <img id="modalRecipeImage" src="" alt="">
+
+        <h2 id="modalRecipeName"></h2>
+        <p id="modalRecipeCategory"></p>
+
+        <h3>Ingredients 🥄</h3>
+        <ul id="modalRecipeIngredients"></ul>
+
+        <h3>How to Cook 👩‍🍳</h3>
+        <p id="modalRecipeInstructions"></p>
+
+    </div>
+</div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
